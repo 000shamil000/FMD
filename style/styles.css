@@ -1,0 +1,96 @@
+/* Slider */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.slider {
+  position: relative;
+  width: 1165px;
+  height: 380px;
+}
+
+.slider img {
+  border-radius: 15px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.control1 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.control2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 10px 20px;
+  background-color: white;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  border-radius: 15px;
+}
+
+.prev-btn img,
+.next-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  filter: grayscale(0);
+}
+
+/* Information Boxes */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.img_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.img_href img {
+  border-radius: 15px;
+}
+
+.text {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+/* Add your other CSS styles here */

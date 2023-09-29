@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style\contact.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="contact02\js\jquery.maskedinput.js"></script>
+    <script src="contact02\js\jquery.validate.min.js"></script>
+    <script src="contact02\js\script.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!--
+    Скрипт для переводчика
+-->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({includedLanguages: 'en,fr,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <div onclick="toggleActiveMenu()" class="bt_menu">
+                        <span class="menu_line"></span>
+                </div>
+
+
+                <div class="head_link">
+                    <ul class="head_nav">
+                        <li class="left_link">
+                            <a class="links_nav links_nav_main " href="about.html">Главная</a>
+                        </li>
+                        <li class="left_link">
+                            <a class="links_nav" href="about.html">О фирме</a>
+                        </li>
+                        <li class="left_link">
+                            <a class="links_nav in_links_nav" href="news.html">Новости</a>
+                        </li>
+                        <li class="left_link">
+                            <a class="links_nav" href="partners02.html">Партнеры</a>
+                        </li>
+                        <li class="right_link">
+                            <a class="links_nav" href="exhibitions.html">Выставки</a>
+                        </li>
+                        <li class="right_link">
+                            <a class="links_nav" href="story.html">История</a>
+                        </li>
+                        <li class="right_link">
+                            <a class="links_nav" href="contact.html">Контакты</a>
+                        </li>
+                        <div class="translate_mb"></div>
+                    </ul>
+                    
+                    <div class="head_main" >
+                        <a href="index.html">
+                            <div class="header_bg">
+                                <img src="https://www.natannge-fmd.com/img/gerbmain.png" alt=""  id="header_img" />
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                
+
+            </div>
+            
+        </header>
+          <main class="main">
+            <div class="container">
+                <div class="tab_cont">
+                    <div class="tab-labels">
+                        <div class="tab-label" onclick="changeTab(event, 'tab1')">Контакты</div>
+                        <div class="tab-label" onclick="changeTab(event, 'tab2')">Обратная связь</div>
+                        <div class="tab-label" onclick="changeTab(event, 'tab3')">Подписка + реклама</div>
+                    </div>
+
+                    <div class="tab-content" id="tab1">
+                        <h2>Редакция журнала FMD - ООО "Натаннж"Интерофис</h2>
+                        <div class="tab_cont_in">
+                            <div class="cont">
+                                <div class="tel">
+                                    <h4>Факс: </h4>
+                                    <p>+7 (495) 462 35 74</p>
+                                    <h4>Тел:</h4>
+                                    <p>+7 (916) 150 11 63</p>
+                                    <p>+7 (916) 286 87 70</p>
+                                    <p>+7 (906) 758 58 52</p>
+                                    <p>+7 (916) 153 36 57</p>
+                                </div>
+                                <div class="mail">
+                                    <h4>E-mail:</h4>
+
+                                    <p>natannge-fmd@mail.ru</p>
+                                    <p>fmdmagazine@mail.ru</p>
+                                    <p>fmdadv5@yandex.ru</p>
+                                </div>
+                            
+                            </div>
+                            <div class="map_y">
+                                <h4>Почтовый и Юридический адрес:</h3>
+                                <p>Россия, Москва, 107241, ул. Амурская, дом 66-58</p>
+                                <div id="map" class="map_n"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="img">
+                                <img src="https://natannge-fmd.com/style/images/art/natella1.jpg" alt="">
+                                <img src="https://natannge-fmd.com/style/images/art/natella2.jpg" alt="">
+                            </div>
+
+
+
+                        
+                    </div>
+
+                    <div class="tab-content" id="tab2">
+                        <h2>Напишите нам</h2>
+                        <form action="contact02\contact.php" method="post">
+                            <div class="survey">
+                                <div class="questionnaire flex_inf">
+                                    <div class="info">
+                                    <div class="text_input">
+                                        <label for="Name">Имя</label>
+                                        <input id="Name" type="text" class="name" name="name" required>
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Surname_1">Фамилия</label>
+                                        <input id="Surname" type="text" name="surname" required>
+                                    </div>
+                                    
+                                    </div>
+    
+                                    <div class="text_input">
+                                        <label for="Position-held">Занимаемая должность</label>
+                                        <input id="Position-held" type="text" name="position_held">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Org">Наименование организации / частное лицо</label>
+                                        <input id="Org" type="text" name="org" required>
+                                    </div>
+                                    <h4>Контактная информация</h4>
+                                    <div class="text_input">
+                                        <label for="Adr_org">Адрес организации (с индексом)</label>
+                                        <input id="Adr_org" type="text" name="adr_org">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Phone">Телефон/факс (с кодом города)</label>
+                                        <input id="Phone" type="text" name="phone" required>
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Email">Электронная почта</label>
+                                        <input id="Email" type="text" name="email" required>
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Www">Адрес в Интернете</label>
+                                        <input id="Www" type="text" name="www" value="http://">
+                                    </div>
+                                    <h4>Координаты для непосредственной связи с Вами</h4>
+                                    <div class="text_input">
+                                        <label for="Home_phone">Телефон/факс (с кодом страны и города)</label>
+                                        <input id="Home_phone" type="text" class="home_phone" name="home_phone" value="+">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="u_Email">Ваша электронная почта</label>
+                                        <input id="u_Email" type="text" name="u_email">
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="Youradr">Почтовый адрес (домашний, с индексом)</label>
+                                        <input id="Youradr" type="text" name="youradr">
+                                    </div>
+                                    
+                                    <h4>Ваши пожелания и комментарии по нашей работе.</h4>
+                                    <div class="text_input">
+                                        <textarea class="textbox" name="message" rows="6" cols="30"></textarea>
+                                    </div>
+                                </div>
+                                <div class="questionnaire ">
+                                    <h4>Как Вы узнали о "Натаннж-Интерофис", о мероприятиях, проводимых им, о журнале FMD?</h4>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="let" value="Письмо">
+                                        <label class="checkbox_label" for="let"><span>Письмо</span></label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="fax" value="Факс">
+                                        <label class="checkbox_label" for="fax"><span>Факс</span></label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="tel" value="По телефону">
+                                        <label class="checkbox_label" for="tel"> <span>По телефону</span></label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="exb" value="На выставке">
+                                        <label class="checkbox_label" for="exb"><span>На выставке</span></label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="wwww" value="Из интернетa">
+                                        <label class="checkbox_label" for="wwww"><span>Из интернетa</span></label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="find_out[]" id="other" value="Из другого источника">
+                                        <label class="checkbox_label" for="other"><span>Из другого источника</span> </label>
+                                    </div>
+                                    <h4>Повышаете ли Вы свою квалификацию?</h4>
+                                    <div class="radio">
+                                        <input class="radio_input" name="class_up" id="class_up_yes" value="ДА" type="radio">
+                                        <label class="radio_label" for="class_up_yes"> <span>Да</span></label>
+                                    </div>
+                                    <div class="radio">
+                                        <input class="radio_input" name="class_up" id="class_up_no" value="НЕТ" type="radio">
+                                        <label class="radio_label" for="class_up_no"><span>Нет</span></label>
+                                    </div>
+                                    <div class="text_input">
+                                        <label for="rub_up">Хотели бы ее повысить, в том числе за рубежом?(Где?)</label>
+                                        <input class="invalid_question" type="text" name="rub_up" id="rub_up">
+                                    </div>
+                                    <h4>Хотели бы Вы подписаться на журнал FMD, выкупить комплект предыдущих номеров? (Не все номера есть в наличии)</h4>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="podp" id="podp_yes" value="ДА" type="radio">
+                                        <label class="radio_label" for="podp_yes">Да</label>
+                                    </div>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="podp" id="podp_no" value="НЕТ" type="radio">
+                                        <label class="radio_label" for="podp_no">Нет</label>
+                                    </div>
+                                    <h4>Хотели бы Вы принять участие в мероприятиях FMD "Журнала FMD в вашем регионе"?</h4>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="sem" id="sem_yas" value="ДА" type="radio">
+                                        <label class="radio_label" for="sem_yas">Да</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input class="radio_input" name="podp" id="podp_no" value="НЕТ" type="radio">
+                                        <label class="radio_label" for="podp_no">Нет</label>
+                                    </div>
+                                    
+                                    <h4>Хотели бы Вы разместить в FMD:</h4>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="place_on[]" id="red_st" value="Редакционную статью">
+                                        <label class="checkbox_label" for="red_st">Редакционную статью </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        
+                                        <input class="checkbox_input" type="checkbox" name="place_on[]" id="rek" value="Рекламу">
+                                        <label class="checkbox_label" for="rek">Рекламу</label>
+                                    </div>
+                                    <h4>Хотели бы Вы заниматься распространением FMD?</h4>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="raspr" id="raspr_yas" value="ДА" type="radio">
+                                        <label class="radio_label" for="raspr_yas">Да</label>
+                                    </div>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="raspr" id="raspr_no" value="НЕТ" type="radio">
+                                        <label class="radio_label" for="raspr_no">Нет</label>
+                                    </div>
+                                    <h4>Хотели бы Вы стать региональным представителем "НАТАННЖ"ИНТЕРОФИС", FMD в Вашем регионе?</h4>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="fmd" id="fmd_yas" value="ДА" type="radio">
+                                        <label class="radio_label" for="fmd_yas">Да</label>
+                                    </div>
+                                    <div class="radio">
+                                        
+                                        <input class="radio_input" name="fmd" id="fmd_no" value="НЕТ" type="radio">
+                                        <label class="radio_label" for="fmd_no">Нет</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <button type="button" class="send-form">Отправить форму</button>
+                            <div class="status"></div>
+                        </form>
+                    </div>
+
+                    <style>
+                        /* Стили для таблицы */
+                        table {
+                          width: 100%;
+                          border-collapse: collapse;
+                        }
+                      
+                        th, td {
+                          padding: 10px;
+                          text-align: left;
+                          border-bottom: 1px solid #ddd;
+                        }
+                      
+                        th {
+                          background-color: #f2f2f2;
+                        }
+                      
+                        /* Стили для текста */
+                        .section-heading {
+                          font-size: 20px;
+                          font-weight: bold;
+                          margin-bottom: 10px;
+                        }
+                      
+                        .section-text {
+                          margin-bottom: 10px;
+                          font-size: 16px;
+                        }
+                      </style>
+                      
+                      <!-- Ваш остальной HTML-код -->
+                      
+                      <div class="tab-content" id="tab3">
+                        <div class="section-heading">СОДЕРЖАНИЕ FMD</div>
+                        <div class="section-text">
+                          Неоспоримый максимум качественной профессиональной информации, в том числе на 1/3 переводной, цветных иллюстраций от ведущих международных, отечественных профессиональных организаций и корреспондентов:
+                        </div>
+                        <!--
+                        <ul class="section-text">
+                          <li>ТЕНДЕНЦИИ МОДЫ на 1,5-2 года вперед</li>
+                          <li>АНАЛИЗ И КОРРЕКТИРОВКИ РЫНКА</li>
+                          <li>КАЛЕНДАРНЫЙ ПЛАН международных, в том числе СНГ, ярмарок, выставок</li>
+                          <li>РЕПОРТАЖИ, ИНТЕРВЬЮ, ОБЗОРЫ наиболее интересных для специалистов СНГ международных мероприятий: ярмарок, выставок, показов, инноваций различных направлений</li>
+                          <li>РЕКЛАМА + ДЕЛОВАЯ информация по вопросам маркетинга, производства и им сопутствующим</li>
+                        </ul>
+                        <div class="section-text">
+                          ПОДПИСКА круглогодичная, с номера журнала. Сдвоенные номера предоставляются в 2-х экземплярах.
+                          <br>
+                          ПОДПИСКА - через "НАТАННЖ" Интерофис (см. ниже). Или ООО "Интерпочта-2003" - тел. 495/580-9580. Или "Каталог персональной подписки "Каталога Российской прессы "Почта России" - тел. 495/974-2131
+                        </div>
+                        <div class="section-text">
+                          СТОИМОСТЬ подписки НА 1 год 1980-00 руб. (по России) и 2200-00 руб. (по СНГ, дальнее зарубежье), ВКЛЮЧАЯ ПОЧТОВЫЕ РАСХОДЫ.
+                        </div>
+                        <div class="section-heading">РАСЦЕНКИ НА РАЗМЕЩЕНИЕ РЕКЛАМНЫХ МОДУЛЕЙ</div>
+                        <div class="section-text">
+                          Формат 1 полосы журнала 235х322 мм /на вылет/, бумага матовая, мелованная /Премиум/
+                        </div>
+                    -->
+                      
+                        <!-- Ваша таблица -->
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>Формат</th>
+                              <th>1 + 1<br>/черно-белая печать/</th>
+                              <th>4+4<br>
+                                /цветная печать/</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1/1 полосы / 235 х 322 /</td>
+                              <td>от 34000.00 р.</td>
+                              <td>от 52000.00 р.</td>
+                            </tr>
+                            <tr>
+                                <td>1/2 полосы / 154 х 322 /</td>
+                                <td>от 13600.00 р.</td>
+                                <td>от 20400.00 р.</td>
+                            </tr>
+                            <tr>
+                                <td>1/3 полосы / 86 х 322 /</td>
+                                <td>от 10200.00 р.</td>
+                                <td>от 15300.00 р.</td>
+                            </tr>
+                            <tr>
+                                <td>1/4 полосы / 58 х 80 /</td>
+                                <td>от 6800.00 р.</td>
+                                <td>от 11900.00 р.</td>
+                            </tr>
+                            <tr>
+                                <td>2/3 полосы / 235 х 160 /</td>
+                                <td>от 17000.00 р.</td>
+                                <td>от 28900.00 р.</td>
+                            </tr>
+                            <!-- Добавьте остальные строки таблицы -->
+                          </tbody>
+                        </table>
+                      </div>
+                      
+                      
+                      
+                </div>
+                
+
+
+            </div>
+            
+          </main>
+          <footer class="footer">
+            <div class="container">
+                <div class="footer_in">
+                    <div class="text_footer">
+                        <h4  onclick="toggleText_footer()">ПОЛИТИКА</h4>
+                        <div class="text_footer_in">
+                            <div class="text_1_ft">
+                                Рекламодатель несёт ответственность за деловые партнёрские отношения с читателями.
+                                НИО и Редакция журнала FMD НЕ несёт ответственность за деловые партнёрские отношения с читателями.
+                            </div>
+                            <div class="text_2_ft">
+                                <div class="img_gerb_ft">
+                                    <img src="img\gerb.png" alt="">
+                                </div>
+                                <p class="footer_p">
+                                    © Перепечатка текстов, названий рубрик, фото, эскизов и тому подобного категорически запрещена, 
+                                    а также фирменного знака "N"IO - родовой герб Бегичевых. При нарушении этого условия неизбежна юридическая ответственность через соответствующие инстанции РФ.  
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div onclick=" toggleAbout_footer()" class="about_us_ft">
+                        <h4>НАШИ ДАННЫЕ</h4>
+                        <div class="our_data_ft">
+                            <div class="adders">
+                                Почтовый и Юридический адрес: <br>
+                                Россия, Москва, 107241, ул. Амурская, дом 66-58
+                            </div>
+                            <div class="num_f">
+                                Факс:<br>
+                                +7 (495) 462-35-74<br>
+                                Тел:<br>
+                                +7 (916) 150-11-63<br>
+                                +7 (906) 758-58-52<br>
+                                +7 (916) 153-36-57<br>
+                                +7 (916) 150-11-63
+                            </div>
+                            <div class="mail_f">
+                                natannge-fmd@mail.ru <br> fmdmagazine@mail.ru <br> fmdadv5@yandex.ru 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="social_network_ft">
+                        <h4 onclick="toggleNetwork_ft()" class="text_socials">СЛЕДИТЕ ЗА НАМИ</h4>
+                            <ul class="socials">
+                                <li class="app">
+                                    <a href="#" class="instagram">
+                                        <img src="https://www.natannge-fmd.com/img\instagram.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="app">
+                                    <a href="" class="twitter">
+                                        <img src="https://www.natannge-fmd.com/img\twitter.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="app">
+                                    <a href="" class="vk">
+                                        <img src="https://www.natannge-fmd.com/img\vk.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="down">
+                    <div class="translate" id="google_translate_element"></div>
+                <p>© FMD "НАТАННЖ" ИНТЕРОФИС - Мода. Маркетинг. Дизайн. 2023г; 26<span translate="no">КАДР</span></p>
+                </div>
+                
+
+            </div>
+        </footer>
+    </div>
+    <script src="nav_footer_ad.js"></script>
+<script src="contact02\js.js"></script>
+</body>
+</html>
